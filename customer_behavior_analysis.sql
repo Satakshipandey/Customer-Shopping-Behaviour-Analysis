@@ -64,7 +64,7 @@ from customer_type
 group by customer_segment;
 
 
--- Q8. What are the top 3 most ordered products within each category? alter
+-- Q8. What are the top 3 most ordered products within each category? 
 with a as(select category,item_purchased,count(customer_id) as total_orders,
 dense_rank() over (partition by category order by count(customer_id) desc) as item_rank
 from customer_data
