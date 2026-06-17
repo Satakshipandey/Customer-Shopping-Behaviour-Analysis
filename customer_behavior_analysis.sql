@@ -30,8 +30,7 @@ select shipping_type,round(avg(purchase_amount),2)
 from customer_data
 where shipping_type in ('Standard','Express')
 group by shipping_type
-order by avg(purchase_amount) desc
-limit 5;
+order by avg(purchase_amount) desc;
 
 
 -- Q5. Do subscribed customers spend more? Compare average spend and total revenue between subscribers and non-subscribers.
